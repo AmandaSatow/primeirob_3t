@@ -1,4 +1,7 @@
-# primeirob_3t
+# Terceiro Trimestre
 
-Amanda Yumi Satow 
-1B  N2
+## Identificação
+Amanda Yumi Satow - Nr. 2
+
+## Conteúdo
+HTML, CSS e JavaScript
