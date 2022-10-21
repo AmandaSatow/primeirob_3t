@@ -34,10 +34,40 @@ for(let j = 1; j <= 10; j++){
   }
 }
 
+function moeda(){
+    atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+}
+
 function total(){
     let v = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
+
+    if(!Number(v)){
+        alert("O valor deve ser numerico.");
+        document.getElementById("valor").value = "";
+        document.getElementById("valor").focus();
+        return
+
+    }
+
+    if(!Number(j)){
+        alert("O juros deve ser numerico.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+
+    }
+
+    if(!Number(t)){
+        alert("O tempo deve ser numerico.");
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
+        return
+
+    }
+
     let r = 0;
     for(let i=1; i <= t; i++){
         r = v * (1+(j/100));
@@ -45,7 +75,7 @@ function total(){
         v = r;
     }
     
-    document.write("Resultado: " + r );
+    document.write("Resultado: " + moeda(r) );
 }
 
 function media(){
