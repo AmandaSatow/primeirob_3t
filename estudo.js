@@ -34,8 +34,8 @@ for(let j = 1; j <= 10; j++){
   }
 }
 
-function moeda(){
-    atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
 }
 
@@ -53,7 +53,7 @@ function total(){
     }
 
     if(!Number(j)){
-        alert("O juros deve ser numerico.");
+        alert("Os juros devem ser numericos.");
         document.getElementById("juros").value = "";
         document.getElementById("juros").focus();
         return
