@@ -49,18 +49,14 @@ function total() {
         return
     }
 
-    if (!Number(v)) {
-        alert("O valor deve ser numérico.");
-        document.getElementById("valor").value = "";
-        document.getElementById("valor").focus();
-        return
-    }
+   
     if (!Number(j)) {
         alert("Os juros devem ser numérico.");
         document.getElementById("juros").value = "";
         document.getElementById("juros").focus();
         return
     }
+    
     if (!Number(t)) {
         alert("O valor dos meses deve ser numérico.");
         document.getElementById("meses").value = "";
@@ -68,16 +64,21 @@ function total() {
         return
     }
 
-    let texto = "";
-    let r = 0;
-    for (let i = 1; i <= t; i++) {
-        r = v * (1 + (j / 100));
-        texto += "Mês " + " valor: " + moeda(r) + "<br>";
+     let r = 0;
+    for(let i=1; i <= t; i++){
+        r = v * (1+(j/100));
+        texto = "Mês "+ i + " valor " + moeda(r) + "<br>";
+       //document.write("Mês " + i + " valor:" + moeda(r)  + "<br>");
         v = r;
     }
-    document.getElementById("mes").innerHTML = texto;
-    document.getElementById("totalGeral").innerHTML = "Total: " + moeda(r);
-
+    document.getElementById("mês").innerHTML=texto;
+document.getElementById("totalGeral").innerHTML="Total: "+moeda(r);
+    //document.write("resultado: " + moeda (r));
+}
+    
+    
+    
+    
 }
 
 
