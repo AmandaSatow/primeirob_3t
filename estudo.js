@@ -65,28 +65,18 @@ function total() {
     }
 
      let r = 0;
-    for(let i=1; i <= t; i++){
+    for (let i=1; i <= t; i++){
         r = v * (1+(j/100));
-        texto = "Mês "+ i + " valor " + moeda(r) + "<br>";
+        texto = "Mês" + " valor " + moeda(r) + "<br>";
        //document.write("Mês " + i + " valor:" + moeda(r)  + "<br>");
         v = r;
     }
+
     document.getElementById("mes").innerHTML=texto;
-document.getElementById("totalGeral").innerHTML="Total: "+moeda(r);
+document.getElementById("totalGeral").innerHTML="Total: " + moeda(r);
     //document.write("resultado: " + moeda (r));
 }
     
-    
-    
-    
-}
-
-
-
-
-
-
-
 
 
 
@@ -130,3 +120,4 @@ function multiplica() {
     let r = (Number(n1) * Number(n2) * Number(n3) * Number(n4))
     document.getElementById("resultado").innerHTML = "Multiplicação: " + r;
 }
+
