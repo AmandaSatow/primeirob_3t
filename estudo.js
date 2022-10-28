@@ -71,7 +71,7 @@ function total() {
        //document.write("Mês " + i + " valor:" + moeda(r)  + "<br>");
         v = r;
     }
-    document.getElementById("mês").innerHTML=texto;
+    document.getElementById("mes").innerHTML=texto;
 document.getElementById("totalGeral").innerHTML="Total: "+moeda(r);
     //document.write("resultado: " + moeda (r));
 }
