@@ -49,14 +49,14 @@ function total() {
         return
     }
 
-   
+
     if (!Number(j)) {
         alert("Os juros devem ser numérico.");
         document.getElementById("juros").value = "";
         document.getElementById("juros").focus();
         return
     }
-    
+
     if (!Number(t)) {
         alert("O valor dos meses deve ser numérico.");
         document.getElementById("meses").value = "";
@@ -64,22 +64,60 @@ function total() {
         return
     }
 
-     let r = 0;
-    for (let i=1; i <= t; i++){
-        r = v * (1+(j/100));
+    let r = 0;
+    for (let i = 1; i <= t; i++) {
+        r = v * (1 + (j / 100));
         texto = "Mês" + " valor " + moeda(r) + "<br>";
-       //document.write("Mês " + i + " valor:" + moeda(r)  + "<br>");
+        //document.write("Mês " + i + " valor:" + moeda(r)  + "<br>");
         v = r;
     }
 
-    document.getElementById("mes").innerHTML=texto;
-document.getElementById("totalGeral").innerHTML="Total: " + moeda(r);
+    document.getElementById("mes").innerHTML = texto;
+    document.getElementById("totalGeral").innerHTML = "Total: " + moeda(r);
     //document.write("resultado: " + moeda (r));
 }
-    
+
+function calculaRaiz() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    //ax2 + bx + c = 0
+
+    let delta = (b*b) - (4*a*c);
+    if (delta < 0) {
+        document.getElementById("raiz").innerHTML = "Não possui raiz real.";
+    }
+    else if (delta == 0) {
+        let x1 = (-b)/(2 * a);
+        Document.getElementById("raiz").innerHTML = "x1 == x2 = " + x1;
+    }
+    else {
+        let x1 = ((-b) + Math.sqrt(delta))/(2*a);
+        let x2 = ((-b) - Math.sqrt(delta))/(2*a);
+    Document.getElementById("raiz").innerHTML = "x1 = " + x1 + "x2 =" + x2 ;
+
+    }
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//NAO USAR
 
 function media() {
     let n1 = document.getElementById("n1").value;
@@ -120,4 +158,6 @@ function multiplica() {
     let r = (Number(n1) * Number(n2) * Number(n3) * Number(n4))
     document.getElementById("resultado").innerHTML = "Multiplicação: " + r;
 }
+
+
 
