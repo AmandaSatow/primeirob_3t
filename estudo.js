@@ -72,7 +72,7 @@ function total() {
         v = r;
     }
 
-    document.getElementById("mes").innerHTML = texto;
+    document.getElementById("meses").innerHTML = texto;
     document.getElementById("totalGeral").innerHTML = "Total: " + moeda(r);
     //document.write("resultado: " + moeda (r));
 }
